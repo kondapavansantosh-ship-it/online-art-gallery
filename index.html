@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ArtVista | Online Art Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        ArtVista<span>.</span>
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#contact">Contact</a>
+
+        <a href="#cart">
+            Cart (<span id="cartCount">0</span>)
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME SECTION ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO ARTVISTA
+        </p>
+
+        <h1>
+            Discover The Beauty<br>
+            Of Art & Creativity
+        </h1>
+
+        <p>
+            Explore beautiful paintings, unique designs
+            and creative artworks from talented artists.
+            Find the perfect artwork for your space.
+        </p>
+
+        <a href="#gallery" class="hero-btn">
+            Explore Collection
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY SECTION ================= -->
+
+<section id="gallery">
+
+    <div class="section-heading">
+
+        <p class="small-title">
+            OUR COLLECTION
+        </p>
+
+        <h2>
+            Explore Beautiful Artworks
+        </h2>
+
+        <p>
+            Discover artwork that inspires your imagination.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH AND FILTER -->
+
+    <div class="filter-section">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search artworks..."
+            onkeyup="searchArt()"
+        >
+
+        <select
+            id="category"
+            onchange="filterArt()"
+        >
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="Painting">
+                Painting
+            </option>
+
+            <option value="Nature">
+                Nature
+            </option>
+
+            <option value="Abstract">
+                Abstract
+            </option>
+
+            <option value="Modern">
+                Modern Art
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- ARTWORK CARDS -->
+
+    <div class="gallery">
+
+
+        <!-- ARTWORK 1 -->
+
+        <div class="card" data-category="Painting">
+
+            <img
+                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=500"
+                alt="Colorful Dreams Painting"
+            >
+
+            <div class="card-content">
+
+                <p class="category-name">
+                    PAINTING
+                </p>
+
+                <h3>
+                    Colorful Dreams
+                </h3>
+
+                <p class="artist">
+                    Artist: John Smith
+                </p>
+
+                <h4>
+                    ₹2,000
+                </h4>
+
+                <button onclick="viewArt(0)">
+                    View Details
+                </button>
+
+                <button onclick="addToCart(0)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARTWORK 2 -->
+
+        <div class="card" data-category="Nature">
+
+            <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=500"
+                alt="Nature Paradise"
+            >
+
+            <div class="card-content">
+
+                <p class="category-name">
+                    NATURE
+                </p>
+
+                <h3>
+                    Nature Paradise
+                </h3>
+
+                <p class="artist">
+                    Artist: David Lee
+                </p>
+
+                <h4>
+                    ₹1,500
+                </h4>
+
+                <button onclick="viewArt(1)">
+                    View Details
+                </button>
+
+                <button onclick="addToCart(1)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARTWORK 3 -->
+
+        <div class="card" data-category="Abstract">
+
+            <img
+                src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=500"
+                alt="Abstract Beauty"
+            >
+
+            <div class="card-content">
+
+                <p class="category-name">
+                    ABSTRACT
+                </p>
+
+                <h3>
+                    Abstract Beauty
+                </h3>
+
+                <p class="artist">
+                    Artist: Emma Wilson
+                </p>
+
+                <h4>
+                    ₹3,000
+                </h4>
+
+                <button onclick="viewArt(2)">
+                    View Details
+                </button>
+
+                <button onclick="addToCart(2)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARTWORK 4 -->
+
+        <div class="card" data-category="Modern">
+
+            <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500"
+                alt="Modern Vision"
+            >
+
+            <div class="card-content">
+
+                <p class="category-name">
+                    MODERN ART
+                </p>
+
+                <h3>
+                    Modern Vision
+                </h3>
+
+                <p class="artist">
+                    Artist: Michael Brown
+                </p>
+
+                <h4>
+                    ₹2,500
+                </h4>
+
+                <button onclick="viewArt(3)">
+                    View Details
+                </button>
+
+                <button onclick="addToCart(3)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARTWORK 5 -->
+
+        <div class="card" data-category="Painting">
+
+            <img
+                src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=500"
+                alt="Artistic Vision"
+            >
+
+            <div class="card-content">
+
+                <p class="category-name">
+                    PAINTING
+                </p>
+
+                <h3>
+                    Artistic Vision
+                </h3>
+
+                <p class="artist">
+                    Artist: Sophia Martin
+                </p>
+
+                <h4>
+                    ₹3,500
+                </h4>
+
+                <button onclick="viewArt(4)">
+                    View Details
+                </button>
+
+                <button onclick="addToCart(4)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARTWORK 6 -->
+
+        <div class="card" data-category="Nature">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500"
+                alt="Natural World"
+            >
+
+            <div class="card-content">
+
+                <p class="category-name">
+                    NATURE
+                </p>
+
+                <h3>
+                    Natural World
+                </h3>
+
+                <p class="artist">
+                    Artist: Olivia James
+                </p>
+
+                <h4>
+                    ₹1,800
+                </h4>
+
+                <button onclick="viewArt(5)">
+                    View Details
+                </button>
+
+                <button onclick="addToCart(5)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO SEARCH RESULT MESSAGE -->
+
+    <p id="noResult">
+        No artworks found.
+    </p>
+
+</section>
+
+
+<!-- ================= ARTWORK DETAILS POPUP ================= -->
+
+<div id="artModal" class="modal">
+
+    <div class="modal-content">
+
+        <span
+            class="close"
+            onclick="closeModal()"
+        >
+            &times;
+        </span>
+
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Selected Artwork"
+        >
+
+
+        <h2 id="modalTitle">
+        </h2>
+
+
+        <p id="modalArtist">
+        </p>
+
+
+        <p id="modalDescription">
+        </p>
+
+
+        <h3 id="modalPrice">
+        </h3>
+
+
+        <button
+            id="modalCartButton"
+            onclick="addModalToCart()"
+        >
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about">
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <p class="small-title">
+                ABOUT OUR GALLERY
+            </p>
+
+            <h2>
+                Where Creativity Meets Art
+            </h2>
+
+            <p>
+
+                ArtVista is an online art gallery created
+                to celebrate creativity, imagination and
+                artistic expression.
+
+                Our platform allows art lovers to explore
+                different types of paintings and discover
+                beautiful artworks from talented artists.
+
+                We provide a simple and interactive platform
+                to search, explore and select artworks.
+
+                We believe every artwork tells a unique story.
+
+            </p>
+
+            <a href="#gallery" class="hero-btn">
+                Discover Art
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES SECTION ================= -->
+
+<section id="services">
+
+    <div class="section-heading">
+
+        <p class="small-title">
+            OUR ADVANTAGES
+        </p>
+
+        <h2>
+            Why Choose ArtVista?
+        </h2>
+
+    </div>
+
+
+    <div class="service-container">
+
+
+        <div class="service-box">
+
+            <h3>
+                🎨 Unique Artworks
+            </h3>
+
+            <p>
+                Explore creative and exclusive
+                artwork collections.
+            </p>
+
+        </div>
+
+
+        <div class="service-box">
+
+            <h3>
+                🖼️ Beautiful Collection
+            </h3>
+
+            <p>
+                Discover attractive paintings
+                from different categories.
+            </p>
+
+        </div>
+
+
+        <div class="service-box">
+
+            <h3>
+                💎 Affordable Prices
+            </h3>
+
+            <p>
+                Find beautiful artworks
+                at affordable prices.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOPPING CART SECTION ================= -->
+
+<section id="cart">
+
+    <div class="section-heading">
+
+        <p class="small-title">
+            YOUR SELECTED ARTWORKS
+        </p>
+
+        <h2>
+            Your Shopping Cart 🛒
+        </h2>
+
+        <p>
+            Review and manage your selected artworks.
+        </p>
+
+    </div>
+
+
+    <!-- CART ITEMS -->
+
+    <div id="cartItems">
+
+    </div>
+
+
+    <!-- TOTAL PRICE -->
+
+    <h3 id="total">
+        Total: ₹0
+    </h3>
+
+
+    <!-- CLEAR CART BUTTON -->
+
+    <button
+        onclick="clearCart()"
+        class="clear-btn"
+    >
+        Clear Cart
+    </button>
+
+</section>
+
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section id="contact">
+
+    <div class="section-heading">
+
+        <p class="small-title">
+            GET IN TOUCH
+        </p>
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            Have questions? We would love to hear from you.
+        </p>
+
+    </div>
+
+
+    <form
+        id="contactForm"
+        onsubmit="sendMessage(event)"
+    >
+
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter Your Name"
+            required
+        >
+
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+        >
+
+
+        <textarea
+            id="message"
+            placeholder="Write Your Message"
+            required
+        ></textarea>
+
+
+        <button type="submit">
+            Send Message
+        </button>
+
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        ArtVista.
+    </h2>
+
+    <p>
+        Where Creativity Meets Art.
+    </p>
+
+    <p>
+        Explore beautiful artworks and discover creativity.
+    </p>
+
+    <p>
+        © 2026 ArtVista Online Art Gallery.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
